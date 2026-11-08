@@ -10,6 +10,9 @@ indexed yet by the global search, in Drafts / Templates, and on middle-click.
 
 Requirements: *Settings > General > Indexing > Enable Global Search and Indexer* (on by default).
 
-Build: `py -3 -I build.py` writes `open-in-conversation.xpi` next to this file.
+Download: the built add-on is attached to the latest release:
+https://github.com/darvodelecbg/thunderbird-open-in-conversation/releases/latest
+
+Build from source: `py -3 -I build.py` writes `open-in-conversation.xpi` next to this file.
 Install: Thunderbird > Add-ons Manager > gear icon > *Install Add-on From File...* > pick the .xpi.
 Thunderbird warns that it is an experiment with full access; accept. No restart needed.
