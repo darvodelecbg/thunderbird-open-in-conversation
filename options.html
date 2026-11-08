@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: message-box; padding: 8px 12px; min-width: 24em; }
+    label { display: flex; gap: .5em; align-items: baseline; margin: .5em 0; }
+    .hint { opacity: .75; font-size: .92em; margin: .15em 0 .8em 1.9em; }
+    h2 { font-size: 1.05em; margin: .2em 0 .6em; }
+    kbd { font: inherit; border: 1px solid currentColor; border-radius: 3px; padding: 0 .3em; opacity: .85; }
+  </style>
+</head>
+<body>
+  <h2 data-i18n="optWhen"></h2>
+  <label><input type="checkbox" id="onEnter"> <span data-i18n="optEnter"></span></label>
+  <label><input type="checkbox" id="onDoubleClick"> <span data-i18n="optDoubleClick"></span></label>
+  <label><input type="checkbox" id="onMiddleClick"> <span data-i18n="optMiddleClick"></span></label>
+  <h2 data-i18n="optRules"></h2>
+  <label><input type="checkbox" id="skipSingle"> <span data-i18n="optSkipSingle"></span></label>
+  <div class="hint" data-i18n="optSkipSingleHint"></div>
+  <div class="hint" id="shortcutHint"></div>
+  <script src="options.js"></script>
+</body>
+</html>

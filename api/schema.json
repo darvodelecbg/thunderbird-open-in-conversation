@@ -1,10 +1,35 @@
 [
   {
     "namespace": "openInConversation",
+    "types": [
+      {
+        "id": "Options",
+        "type": "object",
+        "properties": {
+          "onEnter": { "type": "boolean", "optional": true },
+          "onDoubleClick": { "type": "boolean", "optional": true },
+          "onMiddleClick": { "type": "boolean", "optional": true },
+          "skipSingle": { "type": "boolean", "optional": true }
+        }
+      }
+    ],
     "functions": [
       {
         "name": "enable",
         "type": "function",
+        "async": true,
+        "parameters": []
+      },
+      {
+        "name": "setOptions",
+        "type": "function",
+        "async": true,
+        "parameters": [{ "name": "options", "$ref": "Options" }]
+      },
+      {
+        "name": "openSelected",
+        "type": "function",
+        "description": "Open the conversation for the message selected in the active 3-pane tab, regardless of the options.",
         "async": true,
         "parameters": []
       }

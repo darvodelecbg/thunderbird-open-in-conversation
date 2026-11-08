@@ -1,0 +1,13 @@
+{
+  "extName": { "message": "Open In Conversation" },
+  "extDescription": { "message": "Enter / double-click opens a message in its conversation (the whole thread, across folders) instead of the single message." },
+  "cmdOpenConversation": { "message": "Open the selected message in its conversation" },
+  "optWhen": { "message": "Open the conversation on" },
+  "optEnter": { "message": "Enter" },
+  "optDoubleClick": { "message": "Double-click" },
+  "optMiddleClick": { "message": "Middle-click (otherwise opens the message in a new tab)" },
+  "optRules": { "message": "Rules" },
+  "optSkipSingle": { "message": "Open single messages normally" },
+  "optSkipSingleHint": { "message": "When the conversation has only one message (no replies anywhere, Sent included), open it as a plain message instead of a conversation tab." },
+  "optShortcutHint": { "message": "Shortcut $KEY$ always opens the conversation. Change it in the Add-ons Manager under \"Manage Extension Shortcuts\".", "placeholders": { "key": { "content": "$1" } } }
+}
