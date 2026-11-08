@@ -1,20 +1,27 @@
 {
-    "manifest_version": 2,
-    "applications": {
-        "gecko": {
-            "id": "open_in_conversation@hartz.io",
-            "strict_min_version": "68.0"
-        }
-    },
-
-    "name": "Open In Conversation",
-    "description": "Make the default message list action \"Open Message in Conversation\"",
-    "version": "1.0.1",
-
-    "author": "Jake Hartz",
-    "homepage_url": "https://github.com/jhartz/thunderbird-open-in-conversation",
-
-    "legacy": {
-        "type": "xul"
+  "manifest_version": 2,
+  "name": "Open In Conversation",
+  "description": "Makes Enter / double-click on a message open it in its conversation (threaded view across folders) instead of the plain message. Port of Jake Hartz's add-on to Thunderbird 128+.",
+  "version": "2.0.0",
+  "author": "Jake Hartz (original), ported 2026",
+  "homepage_url": "https://github.com/jhartz/thunderbird-open-in-conversation",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "open_in_conversation@hartz.io",
+      "strict_min_version": "128.0"
     }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "experiment_apis": {
+    "openInConversation": {
+      "schema": "api/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["openInConversation"]],
+        "script": "api/implementation.js"
+      }
+    }
+  }
 }

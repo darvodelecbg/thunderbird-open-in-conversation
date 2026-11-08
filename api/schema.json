@@ -1,0 +1,13 @@
+[
+  {
+    "namespace": "openInConversation",
+    "functions": [
+      {
+        "name": "enable",
+        "type": "function",
+        "async": true,
+        "parameters": []
+      }
+    ]
+  }
+]

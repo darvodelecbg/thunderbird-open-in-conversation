@@ -1,32 +1,15 @@
-# Open In Conversation
+# Open In Conversation (Thunderbird 128+ port)
 
-Thunderbird add-on to make the default message list action "Open Message in Conversation"
+Port of https://github.com/jhartz/thunderbird-open-in-conversation (a legacy XUL overlay, dead since
+Thunderbird 78) to a MailExtension with an Experiment API. Tested against Thunderbird 159.
 
-## What's New
+What it does: Enter or double-click on a message in the thread pane opens the **conversation** (the same
+view as right-click > "Open Message in Conversation": every message of the thread, from any folder, sent
+mail included) instead of just that one message. Falls back to the normal open when the message is not
+indexed yet by the global search, in Drafts / Templates, and on middle-click.
 
-- **0.9** (November 8, 2016): Initial release
-- **1.0.1** (October 20, 2019): Updated from `install.rdf` to `manifest.json` for compatibility with Thunderbird 68
+Requirements: *Settings > General > Indexing > Enable Global Search and Indexer* (on by default).
 
-## How it Works
-
-First, be sure you have message threading enabled (*View* > *Sort by* > *Threaded*). Then, right-click on a thread. Notice the option "Open Message in Conversation":
-
-<img src="docs/context-menu-open-in-conversation.png" width="600">
-
-Basically, this add-on makes that the default action when you press "Enter" or double-click a message.
-
-This works best when you don't have the "multi-pane" layout (i.e. you open messages in a new tab instead of viewing them in a pane).
-
-The window that opens contains not only the messages in the thread that are in your inbox, but also ones in other folders (so you can see sent messages in there too).
-
-## Installation
-
-Go to *Tools* > *Add-ons*, search for "Open In Conversation", and click "Add to Thunderbird".
-
-For more info, go to the [Mozilla Add-ons page](https://addons.thunderbird.net/addon/open-in-conversation/) for Open In Conversation.
-
-For Thunderbird to be able to identify conversations, the setting *Enable Global Search and Indexer* needs to be enabled in *Preferences* > *Advanced* > *General*.
-
-## License
-
-This project is licensed under the Mozilla Public License version 2. For more, see the [LICENSE](LICENSE) file.
+Build: `py -3 -I build.py` writes `open-in-conversation.xpi` next to this file.
+Install: Thunderbird > Add-ons Manager > gear icon > *Install Add-on From File...* > pick the .xpi.
+Thunderbird warns that it is an experiment with full access; accept. No restart needed.
